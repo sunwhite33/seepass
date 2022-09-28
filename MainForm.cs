@@ -30,7 +30,7 @@ namespace seepass
                 if (fileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string file = fileDialog.FileName;//返回文件的完整路径
-                    //this.textBoxZipFilename.Text = file;
+                    this.textBoxZipFilename.Text = file;
                 }
             }));
             t.SetApartmentState(ApartmentState.STA);

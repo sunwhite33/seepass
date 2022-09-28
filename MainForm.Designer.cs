@@ -62,7 +62,6 @@
             this.textBoxZipFilename.ReadOnly = true;
             this.textBoxZipFilename.Size = new System.Drawing.Size(531, 21);
             this.textBoxZipFilename.TabIndex = 1;
-            this.textBoxZipFilename.Text = "ddddddd";
             // 
             // progressBar1
             // 
