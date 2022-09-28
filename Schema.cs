@@ -7,6 +7,7 @@ namespace seepass
 {
     internal class Schema
     {
+        public string name { get; set; }
         public string zipFilename { get; set; }
         public List<PasswordRule> passwordRules { get; set; }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Xml;
 
@@ -32,7 +33,7 @@ namespace seepass
         /// </summary>
         /// <param name="filepath">文件路径</param>
         /// <returns>Json内容</returns>
-        public string GetJsonFile(string filepath)
+        public static string ReadJsonFile(string filepath)
         {
             string json = string.Empty;
             using (FileStream fs = new FileStream(filepath, FileMode.OpenOrCreate, System.IO.FileAccess.ReadWrite, FileShare.ReadWrite))
@@ -45,5 +46,40 @@ namespace seepass
             return json;
         }
 
+        public static string[] EnumerateFiles(string filepath)
+        {
+            try
+            {
+                IEnumerable<string> files = Directory.GetFileSystemEntries(filepath);
+                return files.ToArray();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        public static bool DeleteFile(string filepath)
+        {
+            try
+            {
+                bool isFile = false;
+                // 判断文件是否存在,并删除
+                isFile = File.Exists(filepath);
+                if (isFile)
+                {
+                    // 删除文件
+                    File.Delete(filepath);
+                    return true;
+                }
+                return false;
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
     }
 }
