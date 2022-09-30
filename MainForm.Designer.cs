@@ -44,13 +44,13 @@
             this.linkLabelSponsor = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabelCopyEmail = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.ColumnPasswordSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPasswordCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPasswordPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnIsCapitalized = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ColumnOperation = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.linkLabelCopyEmail = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchema)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -226,6 +226,17 @@
             this.panel1.Size = new System.Drawing.Size(179, 110);
             this.panel1.TabIndex = 12;
             // 
+            // linkLabelCopyEmail
+            // 
+            this.linkLabelCopyEmail.AutoSize = true;
+            this.linkLabelCopyEmail.Location = new System.Drawing.Point(62, 86);
+            this.linkLabelCopyEmail.Name = "linkLabelCopyEmail";
+            this.linkLabelCopyEmail.Size = new System.Drawing.Size(53, 12);
+            this.linkLabelCopyEmail.TabIndex = 11;
+            this.linkLabelCopyEmail.TabStop = true;
+            this.linkLabelCopyEmail.Text = "复制邮箱";
+            this.linkLabelCopyEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCopyEmail_LinkClicked);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -279,17 +290,6 @@
             this.ColumnOperation.ToolTipText = "点击删除按钮删除对应行";
             this.ColumnOperation.UseColumnTextForButtonValue = true;
             // 
-            // linkLabelCopyEmail
-            // 
-            this.linkLabelCopyEmail.AutoSize = true;
-            this.linkLabelCopyEmail.Location = new System.Drawing.Point(62, 86);
-            this.linkLabelCopyEmail.Name = "linkLabelCopyEmail";
-            this.linkLabelCopyEmail.Size = new System.Drawing.Size(53, 12);
-            this.linkLabelCopyEmail.TabIndex = 11;
-            this.linkLabelCopyEmail.TabStop = true;
-            this.linkLabelCopyEmail.Text = "复制邮箱";
-            this.linkLabelCopyEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCopyEmail_LinkClicked);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -340,12 +340,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel linkLabelCopyEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPasswordSymbol;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPasswordCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPasswordPosition;
         private System.Windows.Forms.DataGridViewComboBoxColumn ColumnIsCapitalized;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnOperation;
-        private System.Windows.Forms.LinkLabel linkLabelCopyEmail;
     }
 }
 
